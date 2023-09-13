@@ -1,6 +1,4 @@
 import { google } from "googleapis";
-import credentials from "../../secrets.json";
-
 const jwtClient = new google.auth.JWT(
   import.meta.env.CLIENT_EMAIL,
   undefined,
