@@ -1,0 +1,25 @@
+---
+import Main from "../layouts/main.astro";
+---
+
+<Main>
+  <div class="flex flex-col items-center gap-4">
+    <h1 class="ibm-mono font-thin text-4xl">Thank you!</h1>
+    <h1 class="ibm-mono font-thin px-2">
+      We will be in touch about forthcoming events and releases.
+    </h1>
+  </div>
+</Main>
+<style>
+  .modern-gradient {
+    background-image: radial-gradient(
+      farthest-corner circle at 50% 50% in oklab,
+      oklab(89% -0.3 -0.27) 0%,
+      52%,
+      oklab(35% 0.34 -0.37) 100%
+    );
+  }
+  .ibm-mono {
+    font-family: "IBM Plex Mono", sans-serif;
+  }
+</style>

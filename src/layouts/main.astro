@@ -1,0 +1,51 @@
+---
+import Nav from "../components/nav.astro";
+import { ViewTransitions } from "astro:transitions";
+import "@fontsource/ibm-plex-mono";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/short-flag.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Podium</title>
+    <ViewTransitions />
+  </head>
+  <body class="px-2 bg-[#F9F7F2] lora">
+    <Nav />
+    <div class="mb-1 flex justify-between">
+      <span>---</span>
+      <address class="red-hat font-thin">
+        114 4th Ave N, Edmonds, WA 98020
+      </address>
+      <span>---</span>
+    </div>
+    <div class="flex justify-center">
+      <h1 class="text-sm red-hat font-extralight">
+        Currently Training for the Big Day...
+      </h1>
+    </div>
+    <div class="flex justify-center">
+      <img
+        src="/squiggly.svg"
+        alt="wip placeholder"
+        class="my-2 sm:max-w-lg md:max-w-2xl lg:max-w-3xl"
+      />
+    </div>
+    <slot />
+    <div class="mb-24"></div>
+    <style>
+      .lora {
+        font-family: "Lora", serif;
+      }
+      .red-hat {
+        font-family: "Red Hat Display Variable", sans-serif;
+      }
+      .ibm-mono {
+        font-family: "IBM Plex Mono", sans-serif;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+---
+import Main from "../layouts/main.astro";
+const brands = [
+  "Acne",
+  "Engineered Garments",
+  "RRL",
+  "Filson",
+  "3Sixteen",
+  "Rogue Territory",
+  "Portuguese Flannel",
+  "Naked & Famous",
+  "Hiroshi Kato",
+  "Visvim",
+  "Kapital",
+  "Rogue Territory",
+  "Portuguese Flannel",
+  "Naked & Famous",
+  "Hiroshi Kato",
+  "Acne",
+  "Engineered Garments",
+  "RRL",
+  "Filson",
+  "3Sixteen",
+  "Rogue Territory",
+  "Portuguese Flannel",
+  "Naked & Famous",
+  "Hiroshi Kato",
+  "Visvim",
+  "Kapital",
+];
+---
+
+<Main>
+  <div class="flex justify-center pt-8">
+    <ul class="flex flex-wrap justify-between max-w-2xl">
+      {
+        brands.map((name) => (
+          <li class="my-6">
+            <a
+              class="p-4 border-2 border-black hover:bg-[#2E2525] hover:text-white"
+              href={`brands/${name}`}
+            >
+              {name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Main>

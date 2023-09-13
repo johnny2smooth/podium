@@ -1,0 +1,30 @@
+---
+import Main from "../layouts/main.astro";
+import { appendData } from "../utils/google-form";
+import Newsletter from "../components/newsletter.astro";
+if (Astro.request.method === "POST") {
+  try {
+    let data = await Astro.request.formData();
+    let email = data.get("email")?.toString();
+    let submitted = await appendData(email);
+    if (submitted) {
+      return Astro.redirect("/thank-you");
+    }
+  } catch (error) {}
+}
+---
+
+<Main>
+  <Newsletter />
+</Main>
+<style>
+  .lora {
+    font-family: "Lora", serif;
+  }
+  .red-hat {
+    font-family: "Red Hat Display Variable", sans-serif;
+  }
+  .ibm-mono {
+    font-family: "IBM Plex Mono", sans-serif;
+  }
+</style>
