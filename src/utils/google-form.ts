@@ -1,9 +1,10 @@
 import { google } from "googleapis";
 import credentials from "../../secrets.json";
+
 const jwtClient = new google.auth.JWT(
-  credentials.client_email,
+  import.meta.env.CLIENT_EMAIL,
   undefined,
-  credentials.private_key,
+  import.meta.env.PRIVATE_KEY,
   ["https://www.googleapis.com/auth/spreadsheets"]
 );
 
